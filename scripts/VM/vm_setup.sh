@@ -1,5 +1,7 @@
-#!/bin/bash
-
+#!/usr/bin/bash
+#Para inicializar el archivo es recomendable utilizar los siguientes dos comandos:
+#sudo apt install dos2unix
+#dos2unix vm_setup.sh
 echo "🚀 Iniciando configuración de entorno en VM..."
 
 # 🔄 Actualizar paquetes
@@ -24,8 +26,9 @@ git clone https://github.com/ethanaobrien/emulatorjs ~/emulador-retro
 echo "📦 Copiando archivos del emulador a /var/www/html..."
 sudo rm -rf /var/www/html/*
 sudo cp -r ~/emulador-retro/* /var/www/html/
+sudo systemctl start nginx
 
 # ✅ Finalización
 echo "✅ Setup completo. Reinicia la VM para aplicar permisos de Docker."
-echo "➡️ Para iniciar el servidor: sudo systemctl start nginx"
+echo "➡️ Listo para ejecutar la pagina con el IP de la VM"
 echo "➡️ Para abrir Jupyter: jupyter notebook"
