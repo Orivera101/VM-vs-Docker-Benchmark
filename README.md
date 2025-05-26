@@ -1,26 +1,25 @@
-Proyecto de Benchmark de Rendimiento: VM vs Docker
-Este proyecto compara el uso de recursos y métricas de rendimiento entre una máquina virtual completa (VirtualBox) y un contenedor Docker.
+# Proyecto de Benchmark de Rendimiento: VM vs Docker
 
-🔧 Estructura del Proyecto
+Este proyecto compara el uso de recursos y las métricas de rendimiento entre una máquina virtual completa (VirtualBox) y un contenedor Docker.
 
-notebooks/: Jupyter Notebook para ejecutar y graficar los benchmarks
+## Estructura del Proyecto
 
-scripts/: Scripts de configuración para VM, Docker y el Dockerfile
+- `notebooks/`: Notebooks Jupyter para ejecutar y graficar los benchmarks  
+- `scripts/`: Scripts de configuración para VM, Docker y Dockerfile  
+- `results/`: Carpeta para almacenar los resultados del benchmark  
 
-results/: Carpeta para guardar los resultados del benchmark
+## Requisitos
 
-📦 Requisitos
+- Python 3.8 o superior  
+- Docker (en el host o WSL2)  
+- VirtualBox (con una máquina Linux invitada)  
+- `sysbench`, `jupyter`, `matplotlib`, `psutil`
 
-Python 3.8 o superior
+## Inicio rápido
 
-Docker (en el host o WSL2)
+En VM o Docker, ejecutar:
 
-VirtualBox (con un sistema Linux invitado)
-
-sysbench, jupyter, matplotlib, psutil
-
-🚀 Inicio rápido
-En VM o Docker:
+```bash
 cd scripts
-bash vm_setup.sh   # Para VirtualBox
-bash docker_setup.sh  # Para Docker o WSL2
+bash vm_setup.sh       # Para VirtualBox
+bash docker_setup.sh   # Para Docker o WSL2
